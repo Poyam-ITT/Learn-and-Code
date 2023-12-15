@@ -2,9 +2,9 @@ using System;
 
 public class DataProcessor
 {
-    public int IntegerData;
+    public int Operand;
     public double DecimalData;
-    public string StringData;
+    public string ConvertedInput;
 
     public void CalculateSum(int firstNumber, int secondNumber)
     {
@@ -14,8 +14,8 @@ public class DataProcessor
 
     public void ConvertStringToUppercase(string input)
     {
-        StringData = input.ToUpper();
-        Console.WriteLine("Updated String: " + StringData);
+        ConvertedInput = input.ToUpper();
+        Console.WriteLine("Updated String: " + ConvertedInput);
     }
 }
 
@@ -24,11 +24,11 @@ public class DataHandler
     public static void Main(string[] args)
     {
         DataProcessor dataProcessor = new DataProcessor();
-        dataProcessor.IntegerData = 10;
+        dataProcessor.Operand = 10;
         dataProcessor.DecimalData = 20.5;
-        dataProcessor.StringData = "hello";
+        dataProcessor.ConvertedInput = "hello";
 
-        dataProcessor.CalculateSum(dataProcessor.IntegerData, 5);
+        dataProcessor.CalculateSum(dataProcessor.Operand, 5);
         dataProcessor.ConvertStringToUppercase("world");
     }
 }
