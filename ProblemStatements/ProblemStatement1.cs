@@ -2,8 +2,8 @@ using System;
 
 public class DataProcessor
 {
-    public int Operand;
-    public double DecimalData;
+    public int firstOperand;
+    public double secondfirstOperand;
     public string ConvertedInput;
 
     public void CalculateSum(int firstNumber, int secondNumber)
@@ -24,11 +24,11 @@ public class DataHandler
     public static void Main(string[] args)
     {
         DataProcessor dataProcessor = new DataProcessor();
-        dataProcessor.Operand = 10;
-        dataProcessor.DecimalData = 20.5;
+        dataProcessor.firstOperand = 10;
+        dataProcessor.secondfirstOperand = 20.5;
         dataProcessor.ConvertedInput = "hello";
 
-        dataProcessor.CalculateSum(dataProcessor.Operand, 5);
+        dataProcessor.CalculateSum(dataProcessor.firstOperand, 5);
         dataProcessor.ConvertStringToUppercase("world");
     }
 }
