@@ -2,32 +2,32 @@ using System;
 
 public class AreaProcessor
 {
-    private static double Area;
+    private static double _area;
 
     public static void Main()
     {
         Rectangle rectangle = new Rectangle(5.0, 3.0);
 
-        Area = calculateArea(rectangle);
-        writeAreaToFile();
-        printArea(Area);
+        _area = CalculateArea(rectangle);
+        WriteAreaToFile();
+        PrintArea(_area);
     }
 
-    private static double calculateArea(Rectangle rectangle)
+    private static double CalculateArea(Rectangle rectangle)
     {
         return rectangle.Length * rectangle.Width;
     }
 
-    private static void printArea(double area)
+    private static void PrintArea(double area)
     {
         Console.WriteLine("Area is: " + area);
     }
 
-    private static void writeAreaToFile()
+    private static void WriteAreaToFile()
     {
         try
         {
-            File.WriteAllText("AreaDetails.txt", Area);
+            File.WriteAllText("AreaDetails.txt", _area);
         }
         catch (IOException exception)
         {
